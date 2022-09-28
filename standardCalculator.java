@@ -10,7 +10,7 @@ class standardCalculator {
         Scanner sc = new Scanner(System.in);
         String StrExp = sc.nextLine();
         char[] tokens = StrExp.toCharArray();
-        Stack<Integer> values = new Stack<Integer>();
+        Stack<Double> values = new Stack<Double>();
         Stack<Character> operators= new Stack<Character>();
         for (int i = 0; i < tokens.length; i++) {
             if (tokens[i] == ' ')
@@ -20,7 +20,7 @@ class standardCalculator {
                 // checking for number more than one digit
                 while (i < tokens.length && tokens[i] >= '0' && tokens[i] <= '9')
                     sbuf.append(tokens[i++]);
-                values.push(Integer.parseInt(sbuf.toString()));
+                values.push((double) Integer.parseInt(sbuf.toString()));
                 i--;//offsetting to correct index
             }
             else if (tokens[i] == '(')
@@ -50,7 +50,7 @@ class standardCalculator {
         else
             return true;
     }
-    public static int evaluateExp(char op,int b, int a) {
+    public static double evaluateExp(char op,double b, double a) {
         switch (op) {
             case '+':
                 return a + b;
