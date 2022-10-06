@@ -16,12 +16,12 @@ public class Calculator {
             option = scan.nextInt();
             switch (option) {
                 case 1:
-                    standardCalculator std = new standardCalculator();
-                    std.mainstandardcalculator();
+                    StandardCalculator standard = new StandardCalculator();
+                    standard.mainStandardCalculator();
                     break;
                 case 2:
-                    sceintificCalculator scientific = new sceintificCalculator();
-                    scientific.mainscientificcalculator();
+                    SceintificCalculator scientific = new SceintificCalculator();
+                    scientific.mainScientificCalculator();
                     break;
                 case 3:
                     break;
